@@ -28,6 +28,9 @@ def main() -> None:
     print("    ⭐ ⭐ ⭐ Курсовая работа № 3 ⭐ ⭐ ⭐")
     print(cutter)
 
+    data_base_name: str = input("Введите имя базы данных: ")
+    password: str = input("Введите пароль базы данных: ")
+
     try:
         ask = str(input("База уже существует? (Y/N): "))
         if ask.lower() == "y":
@@ -88,7 +91,8 @@ def main() -> None:
     print(cutter)
 
     # Создаем менеджер БД
-    db = DBManager(dbname="hh_vacancies", user="postgres", password="MegaFon", host="localhost", port="5432")
+    #db = DBManager(dbname="hh_vacancies", user="postgres", password="MegaFon", host="localhost", port="5432")
+    db = DBManager(dbname=data_base_name, user="postgres", password=password, host="localhost", port="5432")
     if not flags_create_base:
         # Создаем таблицы базы данных
         db.create_tables()
