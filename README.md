@@ -15,7 +15,7 @@
 
 
 1. Клонируйте репозиторий:
-   [ссылка](https://github.com/kostya261/PythonProject/pull/3)
+   [ссылка](https://github.com/kostya261/Cursovoi_3---/pull/1)
    
 3. Зависимости указанные в файле: *pyproject.toml*
 ```
